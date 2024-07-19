@@ -1,0 +1,58 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.navbar {
+  background: #212529;
+}
+
+.nav-link {
+  color: white;
+  font-weight: bold;
+}
+
+
+.nav-link:hover{
+  color: #ffffff;
+  font-weight: bold;
+}
+
+#navbar-logo {
+  height: 45px;
+  width: auto;
+}
+
+.vertical-line {
+  border-left: 2px solid white;
+  height: 40px;
+  margin: 0 15px;
+  display: inline-block;
+}
+
+#loginButton, #registerButton {
+  background-color: #141719;
+  color: #FFF;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  margin-right: 15px;
+}
+
+#loginButton:hover, #registerButton:hover {
+  background-color: #282E33;
+}
+
+#loginButton:focus, #registerButton:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#academy-plus{
+  font-weight: bold;
+  color: white;
+}
+

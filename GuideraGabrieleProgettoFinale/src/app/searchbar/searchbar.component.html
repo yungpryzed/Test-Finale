@@ -1,0 +1,37 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<h2 class="text-center">METEO</h2>
+<div style="margin-top: 150px"></div>
+<div class="container mt-5">
+  <div class="search-bar">
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Cerca una città"
+        [(ngModel)]="searchTerm"
+        (keyup.enter)="onSearch(searchTerm)">
+      <div class="input-group-append">
+        <button class="btn btn-primary" (click)="onSearch(searchTerm)">Cerca</button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="weatherCardVisible" class="card-grid">
+    <app-meteocard [cityName]="weatherData.city" [temperature]="weatherData.temperature"></app-meteocard>
+  </div>
+
+  <div *ngIf="!weatherCardVisible" class="card-grid">
+    <app-meteocard *ngFor="let city of randomCities" [cityName]="city"></app-meteocard>
+  </div>
+</div>
+
+</body>
+</html>

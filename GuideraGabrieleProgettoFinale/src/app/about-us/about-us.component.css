@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  margin-top: 75px;
+}
+
+.band-member {
+  text-align: center;
+  margin-top: 30px;
+  position: relative;
+}
+
+.band-member img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.band-member .name-overlay {
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(33, 37, 41, 0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+.row {
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+
+#about-us-section {
+  padding-top: 80px;
+  margin-top: -80px;
+}

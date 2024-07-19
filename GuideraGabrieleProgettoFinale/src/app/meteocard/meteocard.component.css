@@ -1,0 +1,48 @@
+.weather-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 150px; /* Width for square shape */
+  height: 150px; /* Height for square shape */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+.weather-card h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.weather-card p {
+  margin: 0;
+  font-size: 1rem;
+}
+.weather-card .bi {
+  font-size: 2rem; /* Icon size */
+  margin-bottom: 10px;
+}
+
+button{
+  background-color: #141719;
+  color: #FFF;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  margin-right: 15px;
+}
+
+button:hover{
+  background-color: #282E33;
+}
+
+.btn-primary:active {
+  background-color: #282E33 !important;
+  border-color: #282E33 !important;
+  box-shadow: none !important;
+}

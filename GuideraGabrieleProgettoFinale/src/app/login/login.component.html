@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="login.component.css">
+</head>
+<body>
+
+<div class="center-container">
+  <div class="center-login">
+    <h2 id="login" class="text-white text-center">Login</h2>
+    <form (ngSubmit)="submitLogin(loginForm)" #loginForm="ngForm">
+      <div class="form-group">
+        <label for="email" class="text-white">
+          <i class="fas fa-envelope fa-fw me-2"></i>Email:
+        </label>
+        <input type="email" id="email" [(ngModel)]="loginRequest.email" name="email" class="form-control" required email #email="ngModel">
+        <div *ngIf="email.invalid && email.touched" style="color: white">
+          <div *ngIf="email.errors?.['required']">Email obbligatoria</div>
+          <div *ngIf="email.errors?.['email']">Formato email non valido</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password" class="text-white">
+          <i class="fas fa-lock fa-fw me-2"></i>Password:
+        </label>
+        <input type="password" id="password" [(ngModel)]="loginRequest.password" name="password" class="form-control" required minlength="3" #password="ngModel">
+        <div *ngIf="password.invalid && password.touched" class="text-danger">
+          <div *ngIf="password.errors?.['required']" style="color: white">Password obbligatoria</div>
+          <div *ngIf="password.errors?.['minlength']" style="color: white">La password deve essere lunga almeno 3 caratteri</div>
+        </div>
+      </div>
+      <div class="form-group text-center">
+        <button type="submit"  class="btn btn-primary" [disabled]="loginForm.invalid">
+          <i class="fas fa-sign-in-alt fa-fw me-2"></i>Login
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+</body>
+</html>
